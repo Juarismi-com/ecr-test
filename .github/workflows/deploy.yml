@@ -8,7 +8,7 @@ on:
 
 env:
   AWS_REGION: us-east-1
-  ECR_REPOSITORY: ecr-nodejs-app
+  ECR_REPOSITORY: ecr-test
   ECS_SERVICE: ecr-nodejs-service
   ECS_CLUSTER: ecr-cluster
   ECS_TASK_DEFINITION: ecr-nodejs-task
