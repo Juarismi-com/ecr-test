@@ -12,7 +12,7 @@ env:
   ECS_SERVICE: ecr-nodejs-service
   ECS_CLUSTER: ecr-test-cluster
   ECS_TASK_DEFINITION: ecr-test-nodejs-task
-  CONTAINER_NAME: ecr-nodejs-app
+  CONTAINER_NAME: ecr-test
 
 jobs:
   deploy:
