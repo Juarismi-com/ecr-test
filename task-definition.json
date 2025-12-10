@@ -6,6 +6,7 @@
   "memory": "512",
   "executionRoleArn": "arn:aws:iam::423623862620:role/ecsTaskExecutionRole",
   "taskRoleArn": "arn:aws:iam::423623862620:role/ecsTaskRole",
+  "enableFaultInjection": false,
   "containerDefinitions": [
     {
       "name": "ecr-test",
