@@ -1,0 +1,17 @@
+{
+  "name": "ecr-nodejs-app",
+  "version": "1.0.0",
+  "description": "Node.js application for ECR",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
+
