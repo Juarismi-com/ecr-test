@@ -10,8 +10,8 @@ env:
   AWS_REGION: us-east-1
   ECR_REPOSITORY: ecr-test
   ECS_SERVICE: ecr-nodejs-service
-  ECS_CLUSTER: ecr-cluster
-  ECS_TASK_DEFINITION: ecr-nodejs-task
+  ECS_CLUSTER: ecr-test-cluster
+  ECS_TASK_DEFINITION: ecr-test-nodejs-task
   CONTAINER_NAME: ecr-nodejs-app
 
 jobs:

@@ -1,5 +1,5 @@
 {
-  "family": "ecr-nodejs-task",
+  "family": "ecr-test-nodejs-task",
   "networkMode": "awsvpc",
   "requiresCompatibilities": ["FARGATE"],
   "cpu": "256",
@@ -21,7 +21,7 @@
       "logConfiguration": {
         "logDriver": "awslogs",
         "options": {
-          "awslogs-group": "/ecs/ecr-nodejs-task",
+          "awslogs-group": "/ecs/ecr-test-nodejs-task",
           "awslogs-region": "us-east-1",
           "awslogs-stream-prefix": "ecs"
         }
