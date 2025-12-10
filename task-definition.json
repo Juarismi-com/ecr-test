@@ -1,33 +1,49 @@
 {
   "family": "ecr-test-nodejs-task",
+  "executionRoleArn": "arn:aws:iam::423623862620:role/ecsTaskExecutionRole",
   "networkMode": "awsvpc",
+  "containerDefinitions": [
+     {
+        "name": "ecr-test",
+        "image": "",
+        "cpu": 256,
+        "portMappings": [
+           {
+              "containerPort": 3000,
+              "hostPort": 3000,
+              "protocol": "tcp",
+              "appProtocol": "http"
+           }
+        ],
+        "essential": true,
+        "environment": [
+           
+        ],
+        "environmentFiles": [],
+        "interactive": true,
+        "pseudoTerminal": true,
+        "ulimits": [],
+        "logConfiguration": {
+           "logDriver": "awslogs",
+           "options": {
+              "awslogs-group": "/ecs/ecr-test-nodejs-task",
+              "mode": "non-blocking",
+              "awslogs-create-group": "true",
+              "max-buffer-size": "25m",
+              "awslogs-region": "us-east-1",
+              "awslogs-stream-prefix": "ecs"
+           },
+           "secretOptions": []
+        }
+     }
+  ],
+  "volumes": [],
+  "placementConstraints": [],
   "requiresCompatibilities": ["FARGATE"],
   "cpu": "256",
-  "memory": "512",
-  "executionRoleArn": "arn:aws:iam::423623862620:role/ecsTaskExecutionRole",
-  "taskRoleArn": "arn:aws:iam::423623862620:role/ecsTaskRole",
-  "enableFaultInjection": false,
-  "containerDefinitions": [
-    {
-      "name": "ecr-test",
-      "image": "423623862620.dkr.ecr.us-east-1.amazonaws.com/ecr-test:latest",
-      "portMappings": [
-        {
-          "containerPort": 3000,
-          "protocol": "tcp"
-        }
-      ],
-      "essential": true,
-      "environment": [],
-      "logConfiguration": {
-        "logDriver": "awslogs",
-        "options": {
-          "awslogs-group": "/ecs/ecr-test-nodejs-task",
-          "awslogs-region": "us-east-1",
-          "awslogs-stream-prefix": "ecs"
-        }
-      }
-    }
-  ]
+  "memory": "1024",
+  "runtimePlatform": {
+     "cpuArchitecture": "X86_64",
+     "operatingSystemFamily": "LINUX"
+  }
 }
-
